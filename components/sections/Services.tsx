@@ -51,39 +51,65 @@ export function Services() {
     return (
         <section className="py-24 bg-[#FDFBF7]" id="services">
             <div className="container mx-auto px-4 md:px-6">
-                <div className="text-center max-w-2xl mx-auto mb-16">
-                    <h2 className="text-3xl md:text-5xl font-bold mb-4 tracking-tight">Onze Diensten</h2>
-                    <p className="text-muted-foreground text-lg">
-                        Een overzicht van wat we bieden om jou te ondersteunen in je proces.
-                    </p>
+
+                {/* Intro */}
+                <div className="text-center max-w-2xl mx-auto mb-20 space-y-4">
+                    <h2 className="text-xs md:text-sm font-medium tracking-[0.3em] text-stone-500 uppercase">
+                        Aanbod
+                    </h2>
+                    <h3 className="text-3xl md:text-5xl font-light text-stone-800">
+                        Ontdek jouw <span className="font-serif italic text-stone-600">pad naar rust</span>
+                    </h3>
                 </div>
 
-                <motion.div
-                    className="grid grid-cols-1 md:grid-cols-3 gap-8"
-                    variants={containerVariants}
-                    initial="hidden"
-                    whileInView="visible"
-                    viewport={{ once: true, amount: 0.2 }}
-                >
-                    {services.map((service, index) => (
-                        <motion.div key={index} variants={itemVariants}>
-                            <Card className="h-full hover:shadow-lg transition-all duration-300 border-none bg-white/50 backdrop-blur-sm group cursor-pointer hover:-translate-y-1">
-                                <CardHeader>
-                                    <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-colors">
-                                        <service.icon className="h-6 w-6 text-primary" />
-                                    </div>
-                                    <CardTitle className="text-xl group-hover:text-primary transition-colors">{service.title}</CardTitle>
-                                </CardHeader>
-                                <CardContent>
-                                    <p className="text-muted-foreground leading-relaxed">
-                                        {service.description}
-                                    </p>
-                                </CardContent>
-                            </Card>
-                        </motion.div>
-                    ))}
-                </motion.div>
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center mb-24">
+                    {/* Feature Image - Group/Community */}
+                    <motion.div
+                        initial={{ opacity: 0, x: -20 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.8 }}
+                        className="relative rounded-[3rem] overflow-hidden shadow-2xl aspect-[4/3] lg:aspect-auto lg:h-[600px] border-4 border-white"
+                    >
+                        <img
+                            src="/images/geeske-group-beach.jpg"
+                            alt="Group yoga session on the beach"
+                            className="object-cover w-full h-full transform hover:scale-105 transition-transform duration-[2s]"
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-t from-stone-900/80 via-transparent to-transparent flex flex-col justify-end p-12 text-white">
+                            <h4 className="text-3xl font-serif italic mb-3">Groepslessen & Retreats</h4>
+                            <p className="text-white/90 font-light tracking-wide text-lg">Samen bewegen in de natuur, verbinden met elkaar en jezelf.</p>
+                        </div>
+                    </motion.div>
+
+                    {/* Service Grid - Clean & Minimal */}
+                    <motion.div
+                        className="grid grid-cols-1 sm:grid-cols-2 gap-6"
+                        variants={containerVariants}
+                        initial="hidden"
+                        whileInView="visible"
+                        viewport={{ once: true }}
+                    >
+                        {services.map((service, index) => (
+                            <motion.div key={index} variants={itemVariants}>
+                                <Card className="h-full hover:shadow-xl transition-all duration-500 border-none bg-white/80 backdrop-blur-sm shadow-sm hover:-translate-y-1 rounded-[2rem] p-2">
+                                    <CardHeader>
+                                        <div className="w-14 h-14 rounded-2xl bg-[#FDFBF7] flex items-center justify-center mb-4 text-[#D4A373]">
+                                            <service.icon className="h-6 w-6" strokeWidth={1.5} />
+                                        </div>
+                                        <CardTitle className="text-xl font-medium text-stone-800">{service.title}</CardTitle>
+                                    </CardHeader>
+                                    <CardContent>
+                                        <p className="text-stone-500 text-sm leading-loose font-light">
+                                            {service.description}
+                                        </p>
+                                    </CardContent>
+                                </Card>
+                            </motion.div>
+                        ))}
+                    </motion.div>
+                </div>
             </div>
-        </section>
+        </section >
     );
 }

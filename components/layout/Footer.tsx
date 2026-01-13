@@ -9,12 +9,11 @@ export function Footer() {
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
                     {/* Brand */}
                     <div className="space-y-4">
-                        <div className="relative h-16 w-48">
-                            <Image
-                                src="/logo.png"
-                                alt="PuurGeeske Logo"
-                                fill
-                                className="object-contain object-left"
+                        <div className="flex flex-col mb-4">
+                            <img
+                                src="/images/logo-full.png"
+                                alt="Puur Geeske"
+                                className="w-48 h-auto object-contain"
                             />
                         </div>
                         <p className="text-muted-foreground text-sm max-w-xs">

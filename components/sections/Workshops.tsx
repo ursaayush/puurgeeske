@@ -5,61 +5,71 @@ import { Button } from "@/components/ui/Button";
 import { Calendar, Clock, MapPin } from "lucide-react";
 
 export function Workshops() {
+    // Placeholder for workshop data - you would typically fetch this from an API or define it elsewhere
+    const workshops = [
+        {
+            date: "6 Feb",
+            time: "14:00 - 16:00",
+            title: "Hot Yin Yoga: Winter Editie",
+            description: "Laat de kou uit je lichaam verdwijnen en geef jezelf een diepe, verwarmende reset. De focus ligt op vertragen, loslaten en opladen. Met aandacht voor de blaas- en niermeridiaan.",
+            price: "€40",
+        },
+        {
+            date: "12 Mar",
+            time: "10:00 - 12:00",
+            title: "Sound Bath & Meditatie",
+            description: "Ervaar diepe ontspanning en innerlijke rust met een helend klankbad. Laat de vibraties van klankschalen en gongs je meenemen op een meditatieve reis.",
+            price: "€35",
+        },
+        {
+            date: "20 Apr",
+            time: "09:30 - 11:30",
+            title: "Ademwerk voor Stressreductie",
+            description: "Leer krachtige ademhalingstechnieken om stress te verminderen, energie te verhogen en je zenuwstelsel te kalmeren. Een praktische workshop voor dagelijkse toepassing.",
+            price: "€45",
+        },
+    ];
+
     return (
         <section className="py-24 bg-white" id="workshops">
             <div className="container mx-auto px-4 md:px-6">
-                <div className="flex flex-col md:flex-row items-center justify-between mb-12 gap-8">
-                    <div>
-                        <h2 className="text-3xl md:text-5xl font-bold mb-4 tracking-tight">Workshops & Events</h2>
-                        <p className="text-muted-foreground text-lg max-w-xl">
-                            Verdiep je practice met onze speciale workshops en evenementen.
-                        </p>
-                    </div>
-                    <Button variant="outline" className="rounded-full">
-                        Bekijk alle evenementen
-                    </Button>
+                {/* Workshops Header */}
+                <div className="text-center max-w-2xl mx-auto mb-16 space-y-4">
+                    <h2 className="text-xs md:text-sm font-medium tracking-[0.3em] text-stone-500 uppercase">
+                        Agenda
+                    </h2>
+                    <h3 className="text-3xl md:text-5xl font-light text-stone-800">
+                        Workshops & <span className="font-serif italic text-stone-600">Events</span>
+                    </h3>
                 </div>
 
-                <div className="space-y-6">
-                    {/* Featured Workshop Item */}
-                    <div className="group relative overflow-hidden rounded-3xl bg-[#FFF8F0] p-8 md:p-12 transition-all hover:shadow-lg border border-[#FDFBF7]">
-                        <div className="flex flex-col md:flex-row gap-8 justify-between">
-                            <div className="space-y-6 flex-1">
-                                <div className="flex flex-wrap gap-4 text-sm font-medium text-primary">
-                                    <span className="flex items-center gap-2 bg-white/80 px-4 py-2 rounded-full">
-                                        <Calendar className="w-4 h-4" /> 6 Februari
-                                    </span>
-                                    <span className="flex items-center gap-2 bg-white/80 px-4 py-2 rounded-full">
-                                        <Clock className="w-4 h-4" /> 14:00 - 16:00
-                                    </span>
-                                </div>
-
-                                <h3 className="text-2xl md:text-4xl font-bold text-foreground group-hover:text-primary transition-colors">
-                                    Hot Yin Yoga: Winter Editie
-                                </h3>
-
-                                <p className="text-muted-foreground leading-relaxed max-w-2xl">
-                                    Laat de kou uit je lichaam verdwijnen en geef jezelf een diepe, verwarmende reset.
-                                    De focus ligt op vertragen, loslaten en opladen. Met aandacht voor de blaas- en niermeridiaan.
-                                </p>
-
-                                <div className="pt-4 flex items-center gap-4">
-                                    <Button size="lg" className="rounded-full">Inschrijven (€40)</Button>
-                                </div>
+                {/* Vertical Event List for Editorial Feel */}
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    {workshops.map((workshop, index) => (
+                        <div key={index} className="group relative bg-white rounded-[2rem] p-8 hover:shadow-xl transition-all duration-500 border border-stone-100 hover:-translate-y-1">
+                            <div className="absolute top-8 right-8 text-right">
+                                <span className="block text-2xl font-serif italic text-[#D4A373]">{workshop.date}</span>
+                                <span className="text-xs text-stone-400 uppercase tracking-widest">{workshop.time}</span>
                             </div>
 
-                            {/* Decorative/Visual Side */}
-                            <div className="hidden md:block w-1/3 relative">
-                                <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-transparent rounded-2xl" />
-                                {/* Placeholder for an image */}
-                                <div className="w-full h-full bg-primary/5 rounded-2xl flex items-center justify-center text-primary/20">
-                                    <Calendar className="w-24 h-24" />
+                            <div className="mt-16 space-y-4">
+                                <h4 className="text-xl font-medium text-stone-800 group-hover:text-[#D4A373] transition-colors">
+                                    {workshop.title}
+                                </h4>
+                                <p className="text-sm text-stone-500 font-light leading-relaxed">
+                                    {workshop.description}
+                                </p>
+                                <div className="pt-4 flex items-center justify-between">
+                                    <span className="text-sm font-medium text-stone-400">{workshop.price}</span>
+                                    <Button variant="outline" size="sm" className="rounded-full border-stone-200 text-stone-600 hover:bg-stone-50">
+                                        Inschrijven
+                                    </Button>
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    ))}
                 </div>
             </div>
-        </section>
+        </section >
     );
 }
