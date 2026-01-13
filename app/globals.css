@@ -1,26 +1,68 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Brand Colors - Light/Beige/Orange Theme */
+  --background: #FDFBF7;
+  /* Soft cream/off-white background */
+  --foreground: #4A4A4A;
+  /* Soft dark gray for text */
+
+  /* Primary - Richer/Deeper Orange to stand out (PuurGeeske Brand) */
+  --primary: #E68D33;
+  /* Vibrant Golden Orange */
+  --primary-foreground: #FFFFFF;
+  /* White text on the darker orange */
+
+  /* Secondary - Beige */
+  --secondary: #FFF8F0;
+  /* Lighter, warmer beige */
+  --secondary-foreground: #5A3E2B;
+
+  /* Accent - White for cards/sections */
+  --accent: #FFFFFF;
+  --accent-foreground: #4A4A4A;
+
+  /* Muted - Subtle grays */
+  --muted: #EFEFE5;
+  --muted-foreground: #8C8C8C;
+
+  /* Borders */
+  --border: #E6E6DA;
+  --input: #E6E6DA;
+  --ring: #FFDAB9;
 }
 
-@theme inline {
+@theme {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
 }
 
 body {
-  background: var(--background);
+  background-color: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-inter), sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-jakarta), sans-serif;
+  color: #2D2D2D;
+  /* Slightly darker for headings */
 }
