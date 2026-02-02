@@ -1,0 +1,42 @@
+[
+  {
+    "id": "yoga",
+    "title": "Yoga",
+    "description": "Verbind ademhaling en beweging voor flexibiliteit en rust.",
+    "image": "/images/services/yoga.jpg",
+    "icon": "Flower2",
+    "active": true
+  },
+  {
+    "id": "pilates",
+    "title": "Pilates",
+    "description": "Versterk je kern en verbeter je houding en balans.",
+    "image": "/images/services/pilates.jpg",
+    "icon": "Activity",
+    "active": true
+  },
+  {
+    "id": "coaching",
+    "title": "Personal Coaching",
+    "description": "Een-op-een begeleiding om je persoonlijke doelen te bereiken.",
+    "image": "/images/services/coaching.jpg",
+    "icon": "User",
+    "active": true
+  },
+  {
+    "id": "massage",
+    "title": "PuurGeeske Massage",
+    "description": "Diepe ontspanning en herstel voor lichaam en geest.",
+    "image": "/images/services/massage.jpg",
+    "icon": "Heart",
+    "active": true
+  },
+  {
+    "id": "breathwork",
+    "title": "Breathwork",
+    "description": "Leer de kracht van je ademhaling voor energie en focus.",
+    "image": "/images/services/breathwork.jpg",
+    "icon": "Wind",
+    "active": true
+  }
+]

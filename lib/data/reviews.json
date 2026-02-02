@@ -1,0 +1,38 @@
+[
+  {
+    "id": "review-1",
+    "name": "Marieke van den Berg",
+    "photo": "/images/reviews/marieke.jpg",
+    "rating": 5,
+    "text": "Geeske heeft me geholpen om weer in balans te komen na een drukke periode. Haar warme aanpak en professionele begeleiding zijn uniek.",
+    "date": "2024-12-15",
+    "active": true
+  },
+  {
+    "id": "review-2",
+    "name": "Sander de Vries",
+    "photo": null,
+    "rating": 5,
+    "text": "De breathwork sessies zijn transformerend. Ik heb geleerd om stress beter te hanteren en voel me energieker dan ooit.",
+    "date": "2024-11-20",
+    "active": true
+  },
+  {
+    "id": "review-3",
+    "name": "Lisa Jansen",
+    "photo": "/images/reviews/lisa.jpg",
+    "rating": 4,
+    "text": "De yin yoga in de yurt is een magische ervaring. De sfeer is zo rustgevend en Geeske begeleidt met zoveel aandacht.",
+    "date": "2024-10-08",
+    "active": true
+  },
+  {
+    "id": "review-4",
+    "name": "Thomas Bakker",
+    "photo": null,
+    "rating": 5,
+    "text": "Na jaren van rugpijn heeft de combinatie van pilates en coaching me enorm geholpen. Geeske begrijpt het lichaam en de geest.",
+    "date": "2024-09-25",
+    "active": true
+  }
+]

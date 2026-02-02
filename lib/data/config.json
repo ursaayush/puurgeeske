@@ -1,0 +1,18 @@
+{
+  "siteName": "PuurGeeske",
+  "tagline": "Holistic Yoga & Retreats",
+  "missionStatement": "Verbind met je ware zelf in alle rust en ruimte",
+  "email": "info@puurgeeske.nl",
+  "phone": "+31 6 12345678",
+  "whatsapp": "+31612345678",
+  "address": "Scheveningen, Den Haag",
+  "coordinates": {
+    "lat": 52.1031,
+    "lng": 4.2797
+  },
+  "social": {
+    "instagram": "https://instagram.com/puurgeeske",
+    "facebook": "https://facebook.com/puurgeeske"
+  },
+  "bookingUrl": "https://momoyoga.com/puurgeeske"
+}

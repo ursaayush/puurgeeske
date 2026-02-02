@@ -1,0 +1,4 @@
+{
+  "passwordHash": "$2b$10$placeholder_hash_will_be_set_on_first_login",
+  "username": "admin"
+}
