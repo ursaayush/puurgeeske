@@ -42,3 +42,5 @@ next-env.d.ts
 
 # local preview config
 .claude/launch.json
+.env*.local
+work/
